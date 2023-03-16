@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Technologieradar Produkttechnologie</title>
-  <meta name="generator" content="Google Web Designer 15.2.0.0118">
+  <meta name="generator" content="Google Web Designer 15.2.1.0306">
   <style id="gwd-text-style">
     p {
       margin: 0px;
@@ -448,6 +448,13 @@
       left: 214px;
       top: 407px;
     }
+    [data-gwd-group="Popup"] .gwd-grp-jb3o.gwd-img-16pm {
+      position: absolute;
+      left: 776px;
+      width: 21px;
+      height: 21px;
+      top: 76px;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic|Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic|Inter:100,200,300,regular,500,600,700,800,900|Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Roboto+Slab:100,200,300,regular,500,600,700,800,900|Roboto+Condensed:300,300italic,regular,italic,700,700italic" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="groups_runtime.min.1.0.js" gwd-groups-version="1.0"></script>
@@ -589,10 +596,6 @@
       var popUpGroup = document.getElementById("PopUp");
       popUpGroup.style.display = "block";
     };
-    gwd.auto_PopUpClick = function(event) {
-      // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('PopUp', 'display: none;');
-    };
     gwd.auto_Technologie_2Mouseover = function(event) {
       // GWD Predefined Function
       gwd.actions.events.setInlineStyle('Technologie_2', 'background-color: #FFFFFF; opacity: 1;');
@@ -604,6 +607,9 @@
     gwd.auto_Technologie_4Mouseover = function(event) {
       // GWD Predefined Function
       gwd.actions.events.setInlineStyle('Technologie_4', 'background-color: #FFFFFF; opacity: 1;');
+    };
+    gwd.closePopUp = function(event) {
+      document.getElementById("PopUp").style.display = "none";
     };
   </script>
   <script type="text/javascript" gwd-events="registration">
@@ -635,7 +641,6 @@
       gwd.actions.events.addHandler('Technologie', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
-      gwd.actions.events.addHandler('PopUp', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.addHandler('Technologie_1', 'click', gwd.showPopup, false);
       gwd.actions.events.addHandler('Technologie', 'click', gwd.showPopup, false);
       gwd.actions.events.addHandler('Technologie_2', 'mouseover', gwd.auto_Technologie_2Mouseover, false);
@@ -647,6 +652,7 @@
       gwd.actions.events.addHandler('Technologie_4', 'mouseover', gwd.auto_Technologie_4Mouseover, false);
       gwd.actions.events.addHandler('Technologie_4', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_4', 'click', gwd.showPopup, false);
+      gwd.actions.events.addHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('Trends', 'click', gwd.showFilterTrends, false);
@@ -674,7 +680,6 @@
       gwd.actions.events.removeHandler('Technologie', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
-      gwd.actions.events.removeHandler('PopUp', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.removeHandler('Technologie_1', 'click', gwd.showPopup, false);
       gwd.actions.events.removeHandler('Technologie', 'click', gwd.showPopup, false);
       gwd.actions.events.removeHandler('Technologie_2', 'mouseover', gwd.auto_Technologie_2Mouseover, false);
@@ -686,6 +691,7 @@
       gwd.actions.events.removeHandler('Technologie_4', 'mouseover', gwd.auto_Technologie_4Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_4', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_4', 'click', gwd.showPopup, false);
+      gwd.actions.events.removeHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -716,6 +722,7 @@
       <p class="gwd-p-zwfw gwd-grp-jb3o" id="vForschungskategorie">Forschungskategorie</p>
       <p class="gwd-p-1ipt gwd-grp-jb3o" id="beschreibung">Beschreibung</p>
       <p class="gwd-p-nzlx gwd-grp-jb3o" id="popUpHeader">Technologie Name</p>
+      <img src="assets/Schließen_2.png" class="gwd-grp-jb3o gwd-img-16pm" data-gwd-grp-id="schliessen">
     </div>
   </template>
   <svg id="gwd-svg-definitions">

@@ -2,7 +2,7 @@
 <html><head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta charset="utf-8">
   <title>Technologieradar_allgemein</title>
-  <meta name="generator" content="Google Web Designer 15.2.0.0118">
+  <meta name="generator" content="Google Web Designer 15.2.1.0306">
   <style id="gwd-text-style">p {
     margin: 0px;
 }
@@ -905,6 +905,26 @@ body * {
     transform-origin: 500px 281px 0px;
     -webkit-transform-origin: 500px 281px 0px;
     -moz-transform-origin: 500px 281px 0px;
+}
+[data-gwd-group="PopupProzess"] .gwd-grp-jb3o.gwd-img-18qc {
+    position: absolute;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    left: 776px;
+    width: 21px;
+    height: 21px;
+    top: 76px;
+}
+[data-gwd-group="PopupProdukt"] .gwd-grp-jb3o.gwd-img-pu0s {
+    position: absolute;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    left: 776px;
+    width: 21px;
+    height: 21px;
+    top: 76px;
 }</style>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:600|Roboto+Condensed:700|Roboto:regular,700,500" rel="stylesheet" type="text/css">
   
@@ -1036,16 +1056,8 @@ body * {
         }
       }
     };
-    gwd.auto_PopUpClick = function(event) {
-      // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('PopUpProdukt', 'display: none;');
-    };
-    gwd.auto_PopUpClick1 = function(event) {
-      // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('PopUpProzess', 'display: none;');
-    };
     gwd.showProzess = function(event) {
-      window.location.href = "https://technologieradar.glide.page/dl/prozesstechnologien"
+      window.open("https://technologieradar.glide.page/dl/prozesstechnologien");
     };
     gwd.showProdukt = function(event) {
       window.open("https://technologieradar.glide.page/dl/produkttechnologien")
@@ -1053,6 +1065,12 @@ body * {
     gwd.changeMouse = function(event) {
       var elementID = event.target.id;
       document.getElementById(elementID).style.cursor = "pointer";
+    };
+    gwd.closePopupProzess = function(event) {
+      document.getElementById("PopUpProzess").style.display = "none";
+    };
+    gwd.closePopupPordukt = function(event) {
+      document.getElementById("PopUpProdukt").style.display = "none";
     };
   </script>
   <script type="text/javascript" gwd-events="registration">
@@ -1063,28 +1081,28 @@ body * {
       gwd.actions.events.addHandler('Technologie_3', 'mouseout', gwd.auto_Technologie_3Click, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseout', gwd.auto_Technologie_1Mouseout, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
-      gwd.actions.events.addHandler('PopUpProdukt', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.addHandler('Technologie_3', 'click', gwd.showPopupProdukt, false);
       gwd.actions.events.addHandler('Technologie_1', 'click', gwd.showPopUpProzess, false);
-      gwd.actions.events.addHandler('PopUpProzess', 'click', gwd.auto_PopUpClick1, false);
       gwd.actions.events.addHandler('Prozess', 'click', gwd.showProzess, false);
       gwd.actions.events.addHandler('Produkt', 'click', gwd.showProdukt, false);
       gwd.actions.events.addHandler('Produkt', 'mouseover', gwd.changeMouse, false);
       gwd.actions.events.addHandler('Prozess', 'mouseover', gwd.changeMouse, false);
+      gwd.actions.events.addHandler(' PopupProzess schliessen', 'click', gwd.closePopupProzess, false);
+      gwd.actions.events.addHandler(' PopupProdukt schliessen_1', 'click', gwd.closePopupPordukt, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('Technologie_3', 'mouseover', gwd.auto_Technologie_3Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_3', 'mouseout', gwd.auto_Technologie_3Click, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseout', gwd.auto_Technologie_1Mouseout, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
-      gwd.actions.events.removeHandler('PopUpProdukt', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.removeHandler('Technologie_3', 'click', gwd.showPopupProdukt, false);
       gwd.actions.events.removeHandler('Technologie_1', 'click', gwd.showPopUpProzess, false);
-      gwd.actions.events.removeHandler('PopUpProzess', 'click', gwd.auto_PopUpClick1, false);
       gwd.actions.events.removeHandler('Prozess', 'click', gwd.showProzess, false);
       gwd.actions.events.removeHandler('Produkt', 'click', gwd.showProdukt, false);
       gwd.actions.events.removeHandler('Produkt', 'mouseover', gwd.changeMouse, false);
       gwd.actions.events.removeHandler('Prozess', 'mouseover', gwd.changeMouse, false);
+      gwd.actions.events.removeHandler(' PopupProzess schliessen', 'click', gwd.closePopupProzess, false);
+      gwd.actions.events.removeHandler(' PopupProdukt schliessen_1', 'click', gwd.closePopupPordukt, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -1107,7 +1125,7 @@ body * {
   <svg data-gwd-shape="oval" preserveAspectRatio="none" viewBox="0 0 82 82" class="gwd-svg-bd1v gwd-gen-16y2gwdanimation" id="pingOval">
     <ellipse cx="50%" cy="50%" rx="40.5" ry="40.5"></ellipse>
   </svg><span class="gwd-span-3de1">TrendAuto2030Plus</span>
-  <span href="https://technologieradar.glide.page/dl/produkttechnologien" class="gwd-span-1h0e" id="Produkt" style="">Produkttechnologien</span>
+  <span href="https://technologieradar.glide.page/dl/produkttechnologien" class="gwd-span-1h0e" id="Produkt">Produkttechnologien</span>
   <span class="gwd-span-1b6y" id="Prozess">Prozesstechnologien</span>
   <img src="Marker_Gelb.png" id="Marker_Gelb" class="gwd-img-en90">
   <img src="Marker_Gelb.png" id="Marker_Gelb_11" class="gwd-img-2gje">
@@ -1135,7 +1153,7 @@ body * {
   <img src="Marker_Rot_1.png" id="Marker_Rot_1_2" class="gwd-img-hrqm">
   <label id="Technologie_3" class="gwd-label-116l" data-beschreibung="" data-impact="" data-forschungskategorie="" data-trend="Autonomes Fahren, Fahrzeugsicherheit" data-baugruppe="Motor- und Antriebstechnologie" data-usp="Benutzerfreundlichkeit, Zuverlässigkeit" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">Steer-by-wire</label>
   <label id="Technologie_1" data-beschreibung="Das ist die Beschreibung der Technologie" data-impact="Gering" data-forschungskategorie="Grundlagenforschung" data-trend="" data-fertigungsverfahren="Umformen" data-nutzen="" style="position: absolute; text-align: center; border-radius: 8px; opacity: 1; background-color: transparent; padding: 1px 7px;" class="gwd-label-1w4c">Prozesstechnologie</label>
-  <div class="gwd-div-w2i8" data-gwd-group="PopupProdukt" id="PopUpProdukt" style="display: none;">
+  <div class="gwd-div-w2i8" data-gwd-group="PopupProdukt" id="PopUpProdukt" style="">
       <div class="gwd-grp-jb3o gwd-div-vddw" data-gwd-grp-id="BackgroundProdukt"></div>
       <div class="gwd-div-1d9z gwd-grp-jb3o" data-gwd-grp-id="PopupDivProdukt"></div>
       <img src="Popup_Hintergrund_1.jpg" data-gwd-grp-id="Popup_HintergrundProdukt" class="gwd-grp-jb3o gwd-img-10lf" style="border-top-right-radius: 5px; border-top-left-radius: 5px;">
@@ -1157,6 +1175,7 @@ body * {
       <p class="gwd-p-zwfw gwd-grp-jb3o" id="vForschungskategorieProdukt">Forschungskategorie</p>
       <p class="gwd-p-1ipt gwd-grp-jb3o" id="beschreibungProdukt">Beschreibung</p>
       <p class="gwd-p-nzlx gwd-grp-jb3o" id="popUpHeaderProdukt">Technologie Name</p>
+      <img src="Schlie_en_2.png" class="gwd-grp-jb3o gwd-img-pu0s" data-gwd-grp-id="schliessen_1">
     </div>
   <div class="gwd-div-lr32" data-gwd-group="PopupProzess" id="PopUpProzess" style="display: none;">
       <div class="gwd-grp-jb3o gwd-div-vddw" id="BackgroundProzess"></div>
@@ -1180,6 +1199,7 @@ body * {
       <p class="gwd-p-zwfw gwd-grp-jb3o" id="vForschungskategorieProzess">Forschungskategorie</p>
       <p class="gwd-p-1ipt gwd-grp-jb3o" id="beschreibungProzess">Beschreibung</p>
       <p class="gwd-p-nzlx gwd-grp-jb3o" id="popUpHeaderProzess">Technologie Name</p>
+      <img src="Schlie_en_2.png" class="gwd-grp-jb3o gwd-img-18qc" data-gwd-grp-id="schliessen">
     </div>
 
 

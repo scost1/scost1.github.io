@@ -2,7 +2,7 @@
 <html><head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta charset="utf-8">
   <title>Technologieradar_Prozesstechnologie</title>
-  <meta name="generator" content="Google Web Designer 15.2.0.0118">
+  <meta name="generator" content="Google Web Designer 15.2.1.0306">
   <style id="gwd-text-style">p {
     margin: 0px;
 }
@@ -451,6 +451,13 @@ body * {
     transform-origin: 500px 281px 0px;
     -webkit-transform-origin: 500px 281px 0px;
     -moz-transform-origin: 500px 281px 0px;
+}
+[data-gwd-group="Popup"] .gwd-grp-jb3o.gwd-img-1nxf {
+    position: absolute;
+    left: 776px;
+    width: 21px;
+    height: 21px;
+    top: 76px;
 }</style>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700,regular|Roboto:regular,700,500|Roboto+Condensed:700" rel="stylesheet" type="text/css">
   
@@ -565,10 +572,6 @@ body * {
       // GWD Predefined Function
       gwd.actions.events.setInlineStyle('Technologie_1', 'background-color: #FFFFFF; opacity: 1;');
     };
-    gwd.auto_PopUpClick = function(event) {
-      // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('PopUp', 'display: none;');
-    };
     gwd.showPopUp = function(event) {
       //Datenattribute des Labels abrufen
       var elementID = event.target.id
@@ -591,6 +594,9 @@ body * {
       //PopUp anzeigen
       var popUpGroup = document.getElementById("PopUp");
       popUpGroup.style.display = "block";
+    };
+    gwd.closePopUp = function(event) {
+      document.getElementById("PopUp").style.display = "none";
     };
   </script>
   <script type="text/javascript" gwd-events="registration">
@@ -620,8 +626,9 @@ body * {
       gwd.actions.events.addHandler('Nutzen', 'click', gwd.showFilterNutzen, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
-      gwd.actions.events.addHandler('PopUp', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.addHandler('Technologie_1', 'click', gwd.showPopUp, false);
+      gwd.actions.events.addHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
+      gwd.actions.events.addHandler(' Popup schliessen', 'click', gwd.closePopUp, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('Trend1', 'click', gwd.setFilter, false);
@@ -647,8 +654,9 @@ body * {
       gwd.actions.events.removeHandler('Nutzen', 'click', gwd.showFilterNutzen, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
-      gwd.actions.events.removeHandler('PopUp', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.removeHandler('Technologie_1', 'click', gwd.showPopUp, false);
+      gwd.actions.events.removeHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
+      gwd.actions.events.removeHandler(' Popup schliessen', 'click', gwd.closePopUp, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -754,7 +762,7 @@ body * {
     <line x1="0" x2="188.5" y1="0.5" y2="0.5"></line>
   </svg>
   <img src="Marker_Rot_1.png" id="Marker_Rot_1_1" class="gwd-img-1akh">
-  <div class="gwd-div-1com" data-gwd-group="Popup" id="PopUp" style="display: none;">
+  <div class="gwd-div-1com" data-gwd-group="Popup" id="PopUp" style="">
       <div class="gwd-grp-jb3o gwd-div-vddw" data-gwd-grp-id="Background"></div>
       <div class="gwd-div-1d9z gwd-grp-jb3o" data-gwd-grp-id="PopupDiv"></div>
       <img src="Popup_Hintergrund_1.jpg" data-gwd-grp-id="Popup_Hintergrund_1" class="gwd-grp-jb3o gwd-img-10lf" style="border-top-right-radius: 5px; border-top-left-radius: 5px;">
@@ -776,6 +784,7 @@ body * {
       <p class="gwd-p-zwfw gwd-grp-jb3o" id="vForschungskategorie">Forschungskategorie</p>
       <p class="gwd-p-1ipt gwd-grp-jb3o" id="beschreibung">Beschreibung</p>
       <p class="gwd-p-nzlx gwd-grp-jb3o" id="popUpHeader">Technologie Name</p>
+      <img src="Schlie_en_2.png" class="gwd-grp-jb3o gwd-img-1nxf" data-gwd-grp-id="schliessen">
     </div>
 
 

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Technologieradar_Prozesstechnologie</title>
-  <meta name="generator" content="Google Web Designer 15.2.0.0118">
+  <meta name="generator" content="Google Web Designer 15.2.1.0306">
   <style id="gwd-text-style">
     p {
       margin: 0px;
@@ -357,6 +357,13 @@
       left: 0px;
       transform-origin: 500px 281px 0px;
     }
+    [data-gwd-group="Popup"] .gwd-grp-jb3o.gwd-img-1nxf {
+      position: absolute;
+      left: 776px;
+      width: 21px;
+      height: 21px;
+      top: 76px;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900|Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:300,300italic,regular,italic,700,700italic" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="groups_runtime.min.1.0.js" gwd-groups-version="1.0"></script>
@@ -471,10 +478,6 @@
       // GWD Predefined Function
       gwd.actions.events.setInlineStyle('Technologie_1', 'background-color: #FFFFFF; opacity: 1;');
     };
-    gwd.auto_PopUpClick = function(event) {
-      // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('PopUp', 'display: none;');
-    };
     gwd.showPopUp = function(event) {
       //Datenattribute des Labels abrufen
       var elementID = event.target.id
@@ -497,6 +500,9 @@
       //PopUp anzeigen
       var popUpGroup = document.getElementById("PopUp");
       popUpGroup.style.display = "block";
+    };
+    gwd.closePopUp = function(event) {
+      document.getElementById("PopUp").style.display = "none";
     };
   </script>
   <script type="text/javascript" gwd-events="registration">
@@ -526,8 +532,9 @@
       gwd.actions.events.addHandler('Nutzen', 'click', gwd.showFilterNutzen, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
-      gwd.actions.events.addHandler('PopUp', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.addHandler('Technologie_1', 'click', gwd.showPopUp, false);
+      gwd.actions.events.addHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
+      gwd.actions.events.addHandler(' Popup schliessen', 'click', gwd.closePopUp, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('Trend1', 'click', gwd.setFilter, false);
@@ -553,8 +560,9 @@
       gwd.actions.events.removeHandler('Nutzen', 'click', gwd.showFilterNutzen, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
-      gwd.actions.events.removeHandler('PopUp', 'click', gwd.auto_PopUpClick, false);
       gwd.actions.events.removeHandler('Technologie_1', 'click', gwd.showPopUp, false);
+      gwd.actions.events.removeHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
+      gwd.actions.events.removeHandler(' Popup schliessen', 'click', gwd.closePopUp, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -585,6 +593,7 @@
       <p class="gwd-p-zwfw gwd-grp-jb3o" id="vForschungskategorie">Forschungskategorie</p>
       <p class="gwd-p-1ipt gwd-grp-jb3o" id="beschreibung">Beschreibung</p>
       <p class="gwd-p-nzlx gwd-grp-jb3o" id="popUpHeader">Technologie Name</p>
+      <img src="assets/Schließen_2.png" class="gwd-grp-jb3o gwd-img-1nxf" data-gwd-grp-id="schliessen">
     </div>
   </template>
   <svg id="gwd-svg-definitions">
