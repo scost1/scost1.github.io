@@ -99,8 +99,8 @@
       border-image-repeat: stretch;
       border-color: rgb(255, 255, 255);
       width: auto;
-      left: 460px;
-      top: 355px;
+      top: 397px;
+      left: 637px;
     }
     .gwd-label-jhpz {
       font-family: Roboto;
@@ -109,7 +109,7 @@
       transform-origin: 50% 50% 0px;
       width: auto;
       left: 493px;
-      top: 135px;
+      top: 136px;
     }
     @keyframes gwd-gen-1f2sgwdanimation_gwd-keyframes {
       0% {
@@ -347,35 +347,23 @@
       width: 400px;
       top: 345px;
     }
-    .gwd-label-ubrg {
-      font-family: Roboto;
-      font-size: 12px;
-      height: 14px;
-      transform-origin: 50% 50% 0px;
-      width: auto;
-      left: 570px;
-      top: 247px;
-      background-image: none;
-      background-color: transparent;
-      color: rgb(0, 0, 0);
-    }
     .gwd-label-d9ni {
       font-family: Roboto;
       font-size: 12px;
       height: 14px;
       transform-origin: 50% 50% 0px;
       width: auto;
-      left: 481px;
-      top: 269px;
+      left: 439px;
+      top: 247px;
     }
     .gwd-label-1q53 {
       font-family: Roboto;
       font-size: 12px;
       transform-origin: 50% 50% 0px;
       height: 13px;
-      left: 558px;
-      top: 315px;
       width: auto;
+      top: 321px;
+      left: 536px;
     }
     .gwd-img-1m87 {
       position: absolute;
@@ -390,40 +378,32 @@
       width: 12px;
       height: 12px;
       transform-origin: 50% 50% 0px;
-      left: 720px;
-      top: 287px;
-    }
-    .gwd-img-10f5 {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      transform-origin: 50% 50% 0px;
-      left: 586px;
-      top: 263px;
+      left: 619px;
+      top: 309px;
     }
     .gwd-img-1mj2 {
       position: absolute;
       width: 12px;
       height: 12px;
       transform-origin: 50% 50% 0px;
-      left: 546px;
-      top: 316px;
+      left: 570px;
+      top: 307px;
     }
     .gwd-img-rv0x {
       position: absolute;
       width: 12px;
       height: 12px;
       transform-origin: 50% 50% 0px;
-      top: 271px;
-      left: 562px;
+      left: 522px;
+      top: 249px;
     }
     .gwd-img-et70 {
       position: absolute;
       width: 12px;
       height: 12px;
       transform-origin: 50% 50% 0px;
-      left: 558px;
-      top: 356px;
+      top: 398px;
+      left: 623px;
     }
     .gwd-img-1szi {
       position: absolute;
@@ -463,10 +443,10 @@
       font-size: 12px;
       height: 14px;
       transform-origin: 50% 50% 0px;
-      left: 732px;
-      top: 285px;
       width: auto;
       color: rgb(0, 0, 0);
+      top: 307px;
+      left: 629px;
     }
     [data-gwd-group="Popup"] .gwd-grp-jb3o.gwd-button-nkqh {
       position: absolute;
@@ -620,10 +600,6 @@
       var popUpGroup = document.getElementById("PopUp");
       popUpGroup.style.display = "block";
     };
-    gwd.auto_Technologie_2Mouseover = function(event) {
-      // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('Technologie_2', 'background-color: #FFFFFF; opacity: 1;');
-    };
     gwd.auto_Technologie_3Mouseover = function(event) {
       // GWD Predefined Function
       gwd.actions.events.setInlineStyle('Technologie_3', 'background-color: #FFFFFF; opacity: 1;');
@@ -652,6 +628,8 @@
       gwd.actions.events.addHandler('Trends', 'click', gwd.showFilterTrends, false);
       gwd.actions.events.addHandler('Baugruppen', 'click', gwd.showFilterBaugruppen, false);
       gwd.actions.events.addHandler('USPs', 'click', gwd.showFilterUSPs, false);
+      gwd.actions.events.addHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
+      gwd.actions.events.addHandler(' Popup detailansicht', 'click', gwd.technologieAnzeigen, false);
       gwd.actions.events.addHandler('Trend1', 'click', gwd.setFilter, false);
       gwd.actions.events.addHandler('Trend2', 'click', gwd.setFilter, false);
       gwd.actions.events.addHandler('Trend3', 'click', gwd.setFilter, false);
@@ -670,31 +648,28 @@
       gwd.actions.events.addHandler('Bau4', 'click', gwd.setFilter, false);
       gwd.actions.events.addHandler('Bau5', 'click', gwd.setFilter, false);
       gwd.actions.events.addHandler('Bau6', 'click', gwd.setFilter, false);
-      gwd.actions.events.addHandler('Technologie', 'mouseover', gwd.auto_TechnologieMouseover, false);
       gwd.actions.events.addHandler('Technologie', 'mouseout', gwd.filterValues, false);
+      gwd.actions.events.addHandler('Technologie', 'click', gwd.showPopup, false);
+      gwd.actions.events.addHandler('Technologie', 'mouseover', gwd.auto_TechnologieMouseover, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
       gwd.actions.events.addHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_1', 'click', gwd.showPopup, false);
-      gwd.actions.events.addHandler('Technologie', 'click', gwd.showPopup, false);
-      gwd.actions.events.addHandler('Technologie_2', 'mouseover', gwd.auto_Technologie_2Mouseover, false);
-      gwd.actions.events.addHandler('Technologie_2', 'mouseout', gwd.filterValues, false);
-      gwd.actions.events.addHandler('Technologie_2', 'click', gwd.showPopup, false);
       gwd.actions.events.addHandler('Technologie_3', 'mouseover', gwd.auto_Technologie_3Mouseover, false);
       gwd.actions.events.addHandler('Technologie_3', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_3', 'click', gwd.showPopup, false);
       gwd.actions.events.addHandler('Technologie_4', 'mouseover', gwd.auto_Technologie_4Mouseover, false);
       gwd.actions.events.addHandler('Technologie_4', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_4', 'click', gwd.showPopup, false);
-      gwd.actions.events.addHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
       gwd.actions.events.addHandler('Technologie_5', 'mouseover', gwd.auto_Technologie_5Mouseover, false);
       gwd.actions.events.addHandler('Technologie_5', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.addHandler('Technologie_5', 'click', gwd.showPopup, false);
-      gwd.actions.events.addHandler(' Popup detailansicht', 'click', gwd.technologieAnzeigen, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('Trends', 'click', gwd.showFilterTrends, false);
       gwd.actions.events.removeHandler('Baugruppen', 'click', gwd.showFilterBaugruppen, false);
       gwd.actions.events.removeHandler('USPs', 'click', gwd.showFilterUSPs, false);
+      gwd.actions.events.removeHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
+      gwd.actions.events.removeHandler(' Popup detailansicht', 'click', gwd.technologieAnzeigen, false);
       gwd.actions.events.removeHandler('Trend1', 'click', gwd.setFilter, false);
       gwd.actions.events.removeHandler('Trend2', 'click', gwd.setFilter, false);
       gwd.actions.events.removeHandler('Trend3', 'click', gwd.setFilter, false);
@@ -713,26 +688,21 @@
       gwd.actions.events.removeHandler('Bau4', 'click', gwd.setFilter, false);
       gwd.actions.events.removeHandler('Bau5', 'click', gwd.setFilter, false);
       gwd.actions.events.removeHandler('Bau6', 'click', gwd.setFilter, false);
-      gwd.actions.events.removeHandler('Technologie', 'mouseover', gwd.auto_TechnologieMouseover, false);
       gwd.actions.events.removeHandler('Technologie', 'mouseout', gwd.filterValues, false);
+      gwd.actions.events.removeHandler('Technologie', 'click', gwd.showPopup, false);
+      gwd.actions.events.removeHandler('Technologie', 'mouseover', gwd.auto_TechnologieMouseover, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseover', gwd.auto_Technologie_1Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_1', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_1', 'click', gwd.showPopup, false);
-      gwd.actions.events.removeHandler('Technologie', 'click', gwd.showPopup, false);
-      gwd.actions.events.removeHandler('Technologie_2', 'mouseover', gwd.auto_Technologie_2Mouseover, false);
-      gwd.actions.events.removeHandler('Technologie_2', 'mouseout', gwd.filterValues, false);
-      gwd.actions.events.removeHandler('Technologie_2', 'click', gwd.showPopup, false);
       gwd.actions.events.removeHandler('Technologie_3', 'mouseover', gwd.auto_Technologie_3Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_3', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_3', 'click', gwd.showPopup, false);
       gwd.actions.events.removeHandler('Technologie_4', 'mouseover', gwd.auto_Technologie_4Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_4', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_4', 'click', gwd.showPopup, false);
-      gwd.actions.events.removeHandler('PopUp schliessen', 'click', gwd.closePopUp, false);
       gwd.actions.events.removeHandler('Technologie_5', 'mouseover', gwd.auto_Technologie_5Mouseover, false);
       gwd.actions.events.removeHandler('Technologie_5', 'mouseout', gwd.filterValues, false);
       gwd.actions.events.removeHandler('Technologie_5', 'click', gwd.showPopup, false);
-      gwd.actions.events.removeHandler(' Popup detailansicht', 'click', gwd.technologieAnzeigen, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -859,12 +829,11 @@
       </div>
     </div>
   </div>
-  <label id="Technologie" class="gwd-label-k0om" data-trend="Fahrzeugsicherheit" data-baugruppe="Bremsentechnologie + Reifen" data-usp="Sicherheit, Leistung" data-link="" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">Adaptive Reifen</label>
-  <label id="Technologie_1" class="gwd-label-jhpz" data-trend="Konnektivität, Autonomes Fahren" data-baugruppe="Fahrerassistenzsysteme und Sensorik, Interieur &amp; Infotainment-Systeme" data-usp="Leistung, Zuverlässigkeit" data-link="https://technologieradar.glide.page/dl/technologiedatenbank/s/28cb7b/r/McEpNNfVTzCt76jABTj3Pg" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">6G</label>
-  <label id="Technologie_4" class="gwd-label-1q53" data-trend="Konnektivität" data-baugruppe="" data-usp="Zuverlässigkeit" data-link="" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 3px;">LEO Satelliten</label>
-  <label id="Technologie_3" class="gwd-label-d9ni" data-beschreibung="" data-impact="" data-forschungskategorie="" data-trend="Autonomes Fahren, Fahrzeugsicherheit" data-baugruppe="Motor- und Antriebstechnologie" data-usp="Benutzerfreundlichkeit, Zuverlässigkeit" data-link="" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">Steer-by-wire</label>
-  <label id="Technologie_5" class="gwd-label-1xsu" data-beschreibung="" data-impact="" data-forschungskategorie="" data-trend="Autonomes Fahren, Fahrzeugsicherheit" data-baugruppe="Motor- und Antriebstechnologie" data-usp="Benutzerfreundlichkeit, Zuverlässigkeit" data-link="" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">SLAM</label>
-  <label id="Technologie_2" class="gwd-label-ubrg" data-trend="Konnektivität" data-baugruppe="Fahrerassistenzsysteme und Sensorik" data-usp="Zuverlässigkeit" data-link="" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 4px;">Wi-Fi 6</label>
+  <label id="Technologie" class="gwd-label-k0om" data-beschreibung="Bei intelligenten Reifen handelt es sich um mit Sensorik versehene Reifen die Daten in Echtzeit liefern und so Auskunft über aktuelle Straßenbedingungen, Witterungsverhältnisse und den Reifenzustand liefern. So können intelligente Reifensensoren Reparatur- und Wartungskosten reduzieren, einen höheren Fahrkomfort bieten, sich positiv auf die Nachhaltigkeit auswirken und den Kraftstoffverbrauch von Fahrzeugen verringern." data-impact="gering" data-forschungskategorie="Experimentelle Entwicklung" data-trend="Fahrzeugsicherheit" data-baugruppe="Bremsentechnologie + Reifen" data-usp="Sicherheit, Leistung" data-link="https://technologieradar.glide.page/dl/technologiedatenbank/s/28cb7b/r/0A2uTlofRWuhFheCy6L93g" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">Intelligente Reifen</label>
+  <label id="Technologie_1" class="gwd-label-jhpz" data-beschreibung="6G ist eine Weiterentwicklung der bestehenden Telekommunikationstechnologie 5G. Die Technologie verspricht ein robustes Kommunikationsnetzwerk mit einer niedrigen Latenz und eine Vielzahl an Geräten gleichzeitig verbinden zu können." data-impact="sehr groß" data-forschungskategorie="Industrielle Forschung" data-trend="Konnektivität, Autonomes Fahren, Fahrzeugsicherheit" data-baugruppe="Fahrerassistenzsysteme und Sensorik, Interieur + Infotainment-Systeme" data-usp="Zuverlässigkeit, Sicherheit" data-link="https://technologieradar.glide.page/dl/technologiedatenbank/s/28cb7b/r/McEpNNfVTzCt76jABTj3Pg" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">6G</label>
+  <label id="Technologie_4" class="gwd-label-1q53" data-beschreibung="Bei sogenannte Leo-Satelliten (Low Earth Orbit Satelliten) handelt es sich um Satellitengruppen, die die Erde in einer Entfernung von 500 bis 1.200 km umkreisen. Diese Satelliten können als Datenübertragungsnetzwerke verwendet werden und so die weltweite Verfügbarkeit von schnellem Internet gewährleisten." data-impact="moderat" data-forschungskategorie="Experimentelle Entwicklung" data-trend="Konnektivität" data-baugruppe="-" data-usp="Zuverlässigkeit" data-link="https://technologieradar.glide.page/dl/technologiedatenbank/s/28cb7b/r/NmuBCSB6RJK6oPIgs2V.iw" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 3px;">LEO Satelliten</label>
+  <label id="Technologie_3" class="gwd-label-d9ni" data-beschreibung="Steer-by-wire bezeichnet die Technologie, in der die mechanische Verbindung zwischen Lenksäule und Lenkgetriebe komplett entfällt und durch Lenkradaktuator und Zahnstangenaktuator ersetzt wird." data-impact="hoch" data-forschungskategorie="Experimentelle Entwicklung" data-trend="Autonomes Fahren, Fahrzeugsicherheit" data-baugruppe="Motor- und Antriebstechnologie" data-usp="Benutzerfreundlichkeit, Zuverlässigkeit" data-link="https://technologieradar.glide.page/dl/technologiedatenbank/s/28cb7b/r/6x7Xz5KORq68e0NWKjby0A" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">Steer-by-wire</label>
+  <label id="Technologie_5" class="gwd-label-1xsu" data-beschreibung="SLAM steht für simultaneous localization and mapping was übersetzt für Simultane Positionsbestimmung und Kartierung steht. Diese Technologie ermöglicht es Fahrzeugen ohne Karte autonom durch eine unbekannte Umgebung zu navigieren." data-impact="gering" data-forschungskategorie="Markteinführung" data-trend="Autonomes Fahren, Fahrzeugsicherheit" data-baugruppe="Fahrerassistenzsysteme und Sensorik" data-usp="Sicherheit, Zuverlässigkeit" data-link="https://technologieradar.glide.page/dl/technologiedatenbank/s/28cb7b/r/nD89fsN6TuOvlFC9cveYWg" style="position: absolute; text-align: center; border-radius: 8px; padding: 1px 7px;">SLAM</label>
   <p class="gwd-span-8qf4">TrendAuto 2030plus</p>
   <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 188.5 1" class="gwd-line-17bx">
     <line x1="0" x2="188.5" y1="0.5" y2="0.5"></line>
@@ -874,7 +843,6 @@
   <img src="assets/Marker Gelb_2.png" id="Marker_Gelb_6" class="gwd-img-et70">
   <img src="assets/Marker Gelb_2.png" id="Marker_Gelb_5" class="gwd-img-rv0x">
   <img src="assets/Marker Gelb_2.png" id="Marker_Gelb_4" class="gwd-img-1mj2">
-  <img src="assets/Marker Gelb_2.png" id="Marker_Gelb_3" class="gwd-img-10f5">
   <div class="gwd-div-1omn" data-gwd-group="Popup" id="PopUp" style="display: none;" data-gwd-tl-hidden=""></div>
 </body>
 
